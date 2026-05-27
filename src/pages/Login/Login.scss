@@ -1,0 +1,164 @@
+.login {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--grey);
+
+  &-card {
+    background: var(--white);
+    padding: 32px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 10px 30px var(--noir-shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+
+  &-title {
+    text-align: center;
+    margin: 0;
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  &-subtitle {
+    text-align: center;
+    color: var(--medium-grey);
+    font-size: 16px;
+  }
+
+  &-input {
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    border: 1px solid var(--light-grey);
+    width: 100%;
+  }
+
+  &-button {
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    border: none;
+    background: var(--blue);
+    cursor: pointer;
+    color: var(--noir);
+    font-weight: 500;
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    &.google {
+      background: var(--mostard);
+    }
+  }
+
+  &-toggle {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  &-toggle-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: var(--coral-intense);
+    cursor: pointer;
+    margin-left: 5px;
+  }
+
+  &-error {
+    color: var(--coral);
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+
+.personal-info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+}
+
+.password-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-height: 40px;
+    width: 100%;
+    border-radius: 8px;
+    padding: 12px; 
+    background: var(--white);
+    border: 1px solid var(--light-grey);
+
+    
+    &:focus-within {
+        border: 3px solid var(--noir);
+    }
+
+
+  .login-input {
+    flex: 1;
+    max-height: 40px;
+    border: none; 
+    border-radius: 0;      
+    outline: none; 
+    padding: 0;        
+    font-size: 14px;
+    background: transparent;
+
+  }
+
+  .toggle-password {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    img {
+        opacity: 0.6;
+        width: 20px;
+        height: 20px;
+    }
+  }
+}
+
+.input-error {
+  color: var(--coral);
+  font-size: 14px;
+  margin-top: 10px;
+  display: block;
+}
+
+.divider {
+  text-align: center;
+  position: relative;
+
+  span {
+    background: white;
+    padding: 0 10px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &::before {
+    content: "";
+    height: 1px;
+    background: #ddd;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+  }
+}

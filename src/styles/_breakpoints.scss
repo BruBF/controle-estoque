@@ -1,0 +1,36 @@
+
+$screen-md-min: 768px;   // Início do Tablet
+$screen-lg-min: 1090px;  // Início do Desktop
+$screen-xl-min: 1335px;  // Início do Desktop Grande
+
+
+//0px até 767px 
+@mixin mobile-only {
+  @media (max-width: #{$screen-md-min - 1px}) { @content; }
+}
+
+//768px até 1089px 
+@mixin tablet-only {
+  @media (min-width: #{$screen-md-min}) and (max-width: #{$screen-lg-min}) { @content; }
+}
+
+//1090px para cima 
+@mixin desktop-only {
+  @media (min-width: #{$screen-lg-min}) { @content; }
+}
+
+
+//768px para cima
+@mixin md {
+  @media (min-width: #{$screen-md-min}) { @content; }
+}
+
+//1090px para cima
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) { @content; }
+}
+
+// De 1335px para cima
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) { @content; }
+}

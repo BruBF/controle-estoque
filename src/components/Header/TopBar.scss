@@ -1,0 +1,43 @@
+
+
+.top-menu {
+    background-color: var(--blue);
+    color: var(--grey);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.options-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-item {
+    color: var(--noir);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.name-user {
+    color: var(--noir);
+    font-size: 16px;
+}
+
+.logout-link {
+    font-weight: 700;
+    color: var(--coral);
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}

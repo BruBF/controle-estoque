@@ -1,0 +1,42 @@
+@use "./colors";
+@use "./breakpoints" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inria Sans', sans-serif;
+  background-color: var(--grey);
+  color: var(--noir);
+}
+
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px;
+
+
+  @include mobile-only {
+    max-width: 375px;
+  }
+
+  @include tablet-only {
+    max-width: 768px;
+  }
+
+
+  @include lg {
+    max-width: 1090px;
+  }
+
+
+  @include xl {
+    max-width: 1335px;
+  }
+}

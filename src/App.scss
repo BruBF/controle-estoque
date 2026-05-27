@@ -1,0 +1,6 @@
+@use "./styles/core.scss";
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+}
